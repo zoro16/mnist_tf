@@ -82,7 +82,7 @@ def cnn_model(features, labels, mode):
     # ADD EVALUATION METRICS (FOR EVAL MODE)
     eval_metric_ops = {
         "accuracy": tf.metrics.accuracy(
-            labels=labels, predictions=predictions["classess"]
+            labels=labels, predictions=predictions["classes"]
         )
     }
     return tf.estimator.EstimatorSpec(
